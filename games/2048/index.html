@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>2048</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1 class="title">
+                <a href="">2048</a>
+            </h1>
+            <div class="scores-container">
+                <div class="score-container">
+                    <p class="title">PUNKTE</p>
+                    <P class="score">0</P>
+                    <div class="score-addition">
+                        +4
+                    </div>
+                </div>
+                <div class="best-container">
+                    <p class="title">HIGHSCORE</p>
+                    <P class="score">66666</P>
+                </div>
+            </div>
+        </div>
+        <div class="game-intro">
+            <a href="" class="restart-btn">Neues Spiel</a>
+            <h2 class="subtitle">
+                Spiele 2048 online
+            </h2>
+            <p class="above-game">
+                Verbinde die Zahlen und erhalte <strong>2048</strong>!
+            </p>
+        </div>
+        <div class="game-container">
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+            <div class="tile-container">
+
+            </div>
+            <div class="failure-container pop-container">
+                <p>:(</span></p>
+                <p>VERLOREN</p>
+            </div>
+            <div class="winning-container pop-container">
+                <p>:)</p>
+                <p>GEWONNEN</p>
+            </div>
+        </div>
+    </div>
+  <a href="http://www.hannes-hirsch.de" id="floating-button" style="
+    display: block;
+    width: 120px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #5C6BC0;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+" onmouseover="this.style.backgroundColor='#3F51B5';" onmouseout="this.style.backgroundColor='#5C6BC0';">
+    Zurück
+    </a>
+    <script src="js/config.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

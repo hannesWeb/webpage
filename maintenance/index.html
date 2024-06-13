@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Maintenance Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+            color: #333;
+        }
+        .main_page {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .page_header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .page_header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .page_header span {
+            display: block;
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #5C6BC0;
+        }
+        .section_header {
+            font-size: 2em;
+            color: #5C6BC0;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #5C6BC0;
+        }
+        .content_section_text p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+        a {
+            color: #6F51B5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #9C6BC0;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_page">
+        <div class="page_header">
+            <span>Maintenance</span>
+        </div>
+        <div class="content_section_text">
+            <p>We'll be under maintenance on June 1st, 2024</p>
+            <p class="section_header">Type of Maintenance</p>
+            <p>We are performing a scheduled server upgrade to ensure better performance and security. This involves updating our server software and optimizing our database. We apologize for any inconvenience caused and appreciate your understanding.</p>
+            <p class="section_header">Estimated Time</p>
+            <p>We expect the maintenance to be completed by 2:00 PM UTC+1. Please check back after this time.</p>
+        </div>
+    </div>
+    <a href="http://www.hannes-hirsch.de" id="floating-button" style="
+    display: block;
+    width: 120px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #5C6BC0;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+" onmouseover="this.style.backgroundColor='#3F51B5';" onmouseout="this.style.backgroundColor='#5C6BC0';">
+    Zurück
+    </a>
+</body>
+</html>
