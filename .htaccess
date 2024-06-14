@@ -4,3 +4,28 @@ Redirect gone /updates/dos-info
 Redirect gone /updates/gallery
 Redirect gone /updates/gallery-info
 Redirect gone /updates/dos/timeline
+<Files README.md>
+    Order allow,deny
+    Deny from all
+    ErrorDocument 401
+</Files>
+<Files backupIndex.html>
+    Order allow,deny
+    Deny from all
+    ErrorDocument 401 "Zugriff verweigert"
+</Files>
+<Files error.html>
+    Order allow,deny
+    Deny from all
+    ErrorDocument 401 "Zugriff verweigert"
+</Files>
+<Files style.css>
+    Order allow,deny
+    Deny from all
+    ErrorDocument 401 "Zugriff verweigert"
+</Files>
+<Files wartung.html>
+    Order allow,deny
+    Deny from all
+    ErrorDocument 401 "Zugriff verweigert"
+</Files>
