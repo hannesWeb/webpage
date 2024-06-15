@@ -4,7 +4,10 @@ Redirect gone /updates/dos-info
 Redirect gone /updates/gallery
 Redirect gone /updates/gallery-info
 Redirect gone /updates/dos/timeline
-Redirect gone /README.md
-Redirect gone /backupIndex.html
-Redirect gone /error.html
-Redirect gone /wartung.html
+RewriteEngine On
+RewriteRule "^\.git/" - [F,L]
+RewriteRule "^\.github/" - [F,L]
+RewriteRule "^\README.md" - [F,L]
+RewriteRule "^\backupIndex.html" - [F,L]
+RewriteRule "^\error.html" - [F,L]
+RewriteRule "^\wartung.html" - [F,L]
