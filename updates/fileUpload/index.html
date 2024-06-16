@@ -11,70 +11,30 @@
 <link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="stylesheet" href="/style.css">
     <meta charset="UTF-8">
-    <title>Updates und Entwicklungen</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 50px;
-            color: #333;
-        }
-        .main_page {
-            width: 80%;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        .page_header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .page_header span {
-            display: block;
-            font-size: 2.5em;
-            margin-top: 20px;
-            color: #5C6BC0;
-        }
-        .section_header {
-            font-size: 2em;
-            color: #5C6BC0;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 5px solid #5C6BC0;
-        }
-        .content_section_text p {
-            font-size: 1.2em;
-            line-height: 1.6em;
-        }
-        a {
-            color: #6F51B5;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #9C6BC0;
-            text-decoration: underline;
-        }
-    </style>
+    <title>File upload updated</title>
 </head>
 <body>
     <div class="main_page">
         <div class="page_header">
-            <span>Neuste Updates und Entwicklungen</span>
+            <span>Details - Changed file upload</span>
         </div>
         <div class="content_section">
-            <div class="section_header">Changed file upload</div>
             <div class="content_section_text">
-                <p class="project_desc">Changed the server-side file upload situation...</p>
-                <a href="http://hannes-hirsch.de/updates/fileUpload" class="read_more_btn">Read more</a>
-            </div>            
-            <div class="section_header">Fixed a bug</div>
+                <p>Changed the server-side file upload situation, so now my developers can upload new server files through the github repository and do not have to ssh into my server. This change has made the process more efficient and secure, eliminating the need for developers to directly access the server.</p>
+            </div> 
+            <div class="section_header">Benefits</div>
             <div class="content_section_text">
-                <p class="project_desc">Fixed a bug which allowed DoS attacks to take place.</p>
-            </div>
+                <p>This change has several benefits:</p>
+                <ul>
+                    <li><strong>Efficiency:</strong> Developers can now focus more on coding rather than dealing with server access issues.</li>
+                    <li><strong>Security:</strong> By limiting direct server access, the security of the server is enhanced.</li>
+                    <li><strong>Scalability:</strong> This change makes it easier to manage larger teams of developers, as they can all upload files independently.</li>
+                </ul>
+            </div>      
+            <div class="section_header">Future plans</div>
+            <div class="content_section_text">
+                <p>We plan to continue improving our file upload process, with the goal of making it even more seamless and efficient for our developers. Stay tuned for more updates!</p>
+            </div>        
         </div>
     </div>
     <a href="http://www.hannes-hirsch.de" id="floating-button" style="
