@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta property="og:title" content="Hannes' Website" />
-<meta property="og:description" content="Hier könnte Ihre Werbung stehen!" />
-<meta property="og:image" content="https://www.hannes-hirsch.de/favicon/android-chrome-512x512.png" />
-<meta property="og:url" content="https://hannes-hirsch.de" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<link rel="stylesheet" href="/style.css">
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Hannes' Website" />
+    <meta property="og:description" content="Hier könnte Ihre Werbung stehen!" />
+    <meta property="og:image" content="https://www.hannes-hirsch.de/favicon/android-chrome-512x512.png" />
+    <meta property="og:url" content="https://hannes-hirsch.de" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/style.css">
     <title>Offline</title>
     <style>
         body {
@@ -31,19 +31,30 @@
             margin: 0 auto;
         }
     </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = "/tunnelChallengeCompleted";
+        }, 20000);
+    </script>
 </head>
 <body>
     <article>
-        <h1>Wir werden bald zurück sein!</h1>
+        <h1>Wir sind zurück!</h1>
         <div>
-            <p>Die Website ist <strong>vorübergehend nicht verfügbar</strong>. Wir arbeiten daran, sie so bald wie möglich wieder online zu bringen. Vielen Dank für Ihr Verständnis.</p>
-            <p>Wir freuen uns darauf, Ihnen bald eine verbesserte und aktualisierte Website präsentieren zu können.</p>
+            <p>Die Website ist <strong>wieder verfügbar</strong>.</p>
+            <p>Wir freuen uns darauf, Ihnen eine verbesserte und aktualisierte Website präsentieren zu können.</p>
             <p> - Hannes Hirsch und sein gesamtes Team</p>
         </div>
         <br>
         <div>
             <p> Update 08.08.2024 15.10 Uhr UTC: Die Website wurde nun auf den https-Standard geupdatet, die Downtime wird noch ca. 1h dauern.</p>
+            <p> Update 08.08.2024 15.50 Uhr UTC: Die Website wurde jetzt geupdated, jeder Datenverkehr wird aktuell noch durch diesen Tunnel geleitet.</p>
         </div>
     </article>
+    <br>
+    <br>
+    <footer>
+        <p>Sie werden in 20 Sekunden auf die Website weitergeleitet. Der Tunnel wird von Cloudflare bereitgestellt.</p>
+    </footer>
 </body>
 </html>
