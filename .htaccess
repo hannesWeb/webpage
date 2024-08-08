@@ -1,7 +1,15 @@
+Redirect gone /updates/dos
+Redirect gone /updates/dos-attack
+Redirect gone /updates/dos-info
+Redirect gone /updates/gallery
+Redirect gone /updates/gallery-info
+Redirect gone /updates/dos/timeline
 RewriteEngine On
-RewriteBase /
-
-# Alle URLs außer der Startseite auf die Startseite umleiten
-RewriteCond %{REQUEST_URI} !^/$
-RewriteRule ^ / [R=301,L]
-
+RewriteRule "^\.git/" - [F,L]
+RewriteRule "^\.github/" - [F,L]
+RewriteRule "^\README.md" - [F,L]
+RewriteRule "^\CODE_OF_CONDUCT.md" - [F,L]
+RewriteRule "^\backupIndex.html" - [F,L]
+RewriteRule "^\error.html" - [F,L]
+RewriteRule "^\wartung.html" - [F,L]
+RewriteRule "^\vorlage.html" - [F,L]
