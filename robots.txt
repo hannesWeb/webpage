@@ -1,2 +1,2 @@
 Crawl-delay: 10
-Sitemap: http://hannes-hirsch.de/sitemap.xml
+Sitemap: https://hannes-hirsch.de/sitemap.xml

@@ -1,10 +1,15 @@
+# Redirects
 Redirect gone /updates/dos
 Redirect gone /updates/dos-attack
 Redirect gone /updates/dos-info
 Redirect gone /updates/gallery
 Redirect gone /updates/gallery-info
 Redirect gone /updates/dos/timeline
+
+# Enable RewriteEngine
 RewriteEngine On
+
+# Block access to certain directories and files
 RewriteRule "^\.git/" - [F,L]
 RewriteRule "^\.github/" - [F,L]
 RewriteRule "^\README.md" - [F,L]
@@ -13,3 +18,7 @@ RewriteRule "^\backupIndex.html" - [F,L]
 RewriteRule "^\error.html" - [F,L]
 RewriteRule "^\wartung.html" - [F,L]
 RewriteRule "^\vorlage.html" - [F,L]
+
+# Redirect all http links to https with a 301 status code
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
