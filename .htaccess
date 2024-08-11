@@ -20,5 +20,5 @@ RewriteRule "^\wartung.html" - [F,L]
 RewriteRule "^\vorlage.html" - [F,L]
 
 # Redirect all http links to https with a 301 status code
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
