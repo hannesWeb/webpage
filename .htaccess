@@ -22,3 +22,72 @@ RewriteRule "^\vorlage.html" - [F,L]
 # Redirect all http links to https with a 301 status code
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_URI} ^/restricted-content/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/legal-issues/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/banned-resources/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/prohibited/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/content-not-available/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/hidden-data/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/unavailable-info/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/blacklisted-content/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/not-allowed/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/censored-content/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/not-accessible/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/legal-restrictions/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/forbidden-material/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/restricted-access/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/access-denied/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/private-documents/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/sensitive-data/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/confidential/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/disallowed-content/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/restricted-files/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/not-permitted/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/blocked-resources/
+RewriteRule ^(.*)$ /451.html [L,R=451]
+
+RewriteCond %{REQUEST_URI} ^/unavailable-info/
+RewriteRule ^(.*)$ /451.html [L,R=451]
