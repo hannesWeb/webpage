@@ -1,3 +1,10 @@
+<?php
+            $num1 = rand(0, 9);
+            $num2 = rand(0, 9);
+            $operators = array('+', '-', '*');
+            $operator = $operators[array_rand($operators)];
+            $question = "$num1 $operator $num2";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +28,7 @@
         <div class="content_section">
           <div class="section_header">Kontaktinformationen</div>
           <div class="content_section_text">
-              <p>Hannes Hirsch<br>E-Mail: <a href="mailto:info@hannes-hirsch.de">info@hannes-hirsch.de</p>
+              <p>Hannes Hirsch<br>E-Mail: <a href="mailto:info@hannes-hirsch.de">info@hannes-hirsch.de</a></p>
           </div>
           <div class="section_header">Contact me:</div>
           <form action="contact.php" method="post">
@@ -36,14 +43,6 @@
             
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
-            <?php
-            $num1 = rand(0, 9);
-            $num2 = rand(0, 9);
-            $operators = array('+', '-', '*');
-            $operator = $operators[array_rand($operators)];
-            $question = "$num1 $operator $num2";
-            ?>
             
             <label for="captcha">What is <?php echo $question; ?>?</label>
             <input type="text" id="captcha" name="captcha" required>
