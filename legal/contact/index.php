@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
             $num1 = rand(0, 9);
             $num2 = rand(0, 9);
@@ -5,7 +6,6 @@
             $operator = $operators[array_rand($operators)];
             $question = "$num1 $operator $num2";
 ?>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
