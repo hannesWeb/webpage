@@ -12,53 +12,6 @@
 <link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="stylesheet" href="/style.css">
     <title>Kontakt</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 50px;
-            color: #333;
-        }
-        .main_page {
-            width: 80%;
-            margin: auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        .page_header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .page_header span {
-            display: block;
-            font-size: 2.5em;
-            margin-top: 20px;
-            color: #5C6BC0;
-        }
-        .section_header {
-            font-size: 2em;
-            color: #5C6BC0;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 5px solid #5C6BC0;
-        }
-        .content_section_text p {
-            font-size: 1.2em;
-            line-height: 1.6em;
-        }
-        a {
-            color: #6F51B5;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #9C6BC0;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <div class="main_page">
@@ -70,6 +23,35 @@
           <div class="content_section_text">
               <p>Hannes Hirsch<br>E-Mail: <a href="mailto:info@hannes-hirsch.de">info@hannes-hirsch.de</p>
           </div>
+          <div class="section_header">Contact me:</div>
+          <form action="contact.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <?php
+            $num1 = rand(0, 9);
+            $num2 = rand(0, 9);
+            $operators = array('+', '-', '*');
+            $operator = $operators[array_rand($operators)];
+            $question = "$num1 $operator $num2";
+            ?>
+            
+            <label for="captcha">What is <?php echo $question; ?>?</label>
+            <input type="text" id="captcha" name="captcha" required>
+            <input type="hidden" name="question" value="<?php echo $question; ?>">
+            
+            <input type="submit" value="Send">
+          </form>
+          
         </div>
     </div>
     <a href="https://www.hannes-hirsch.de" id="floating-button" style="
