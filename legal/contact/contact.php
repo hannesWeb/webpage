@@ -32,8 +32,8 @@
                         $to = "info@mail.hannes-hirsch.de";
                         $headers = "From: " . $email;
                         
-                        mail($to, $subject, $message, $headers);
-                        echo "Your message was sent successfully";
+                        // mail($to, $subject, $message, $headers);
+                        echo "This tool is out of order.";
                     } else {
                         echo "Captcha wrong";
                     }
