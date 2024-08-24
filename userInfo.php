@@ -14,7 +14,8 @@ function getVisIpAddr() {
 
 $ip = getVisIPAddr();
 $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
-$isp = gethostbyaddr($ip);
+$ispData = @json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$isp = $ispData->org ?? 'Unbekannt';
 $date = date('Y-m-d H:i:s');
 $browser = $_SERVER['HTTP_USER_AGENT'];
 $lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
