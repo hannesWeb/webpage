@@ -1,5 +1,7 @@
 <?php 
 
+ob_start();
+
 function getVisIpAddr() { 
     if (!empty($_SERVER['HTTP_CLIENT_IP'])) { 
         return $_SERVER['HTTP_CLIENT_IP']; 
@@ -24,7 +26,7 @@ $http_status = http_response_code();
 $referrer = $_SERVER['HTTP_REFERER'] ?? 'Direkter Zugriff';
 $os = php_uname('s') . ' ' . php_uname('r');
 $content = $_SERVER['REQUEST_URI'];
-$data_size = $_SERVER['CONTENT_LENGTH'] ?? 'Unbekannt';
+$data_size = $_SERVER['CONTENT_LENGTH'] ?? 'Nur bei POST-Requests zu ermitteln';
 
 echo "<h2>Benutzerinformationen</h2>";
 echo "<ul>";
@@ -43,9 +45,14 @@ echo "<li><strong>Browser:</strong> {$browser}</li>";
 echo "<li><strong>Sprache und Browser-Version:</strong> {$lang}</li>";
 echo "<li><strong>Inhalt des Abrufs:</strong> {$content}</li>";
 echo "<li><strong>HTTP-Statuscode:</strong> {$http_status}</li>";
-echo "<li><strong>Datenmenge:</strong> {$data_size}</li>";
 echo "<li><strong>Verweisende Website:</strong> {$referrer}</li>";
 echo "<li><strong>Betriebssystem:</strong> {$os}</li>";
+echo "<li><strong>Größe der empfangenen Daten:</strong> {$data_size}</li>";
 echo "</ul>";
+
+$sent_data_size = ob_get_length();
+echo "<p><strong>Größe der gesendeten Daten:</strong> {$sent_data_size} Bytes</p>";
+
+ob_end_flush();
 
 ?> 
