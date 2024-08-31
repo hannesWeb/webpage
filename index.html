@@ -24,6 +24,22 @@
             }
         }
 
+        function getLanguageCode(country) {
+            const countryLanguageMap = {
+                'Germany': 'de',
+                'England': 'en',
+                'United States': 'en',
+                'Canada': 'en',
+                'Australia': 'en',
+                'New Zealand': 'en',
+                'Ireland': 'en',
+                'South Africa': 'en',
+                'The Netherlands': 'nl',
+                // Weitere Länder und ihre Sprachcodes hier hinzufügen
+            };
+            return countryLanguageMap[country] || 'auto';
+        }
+
         function translatePage(language) {
             const url = `https://translate.google.com/translate?sl=auto&tl=${language}&u=https://hannes-hirsch.de`;
             window.location.href = url;
@@ -34,9 +50,10 @@
             const englishSpeakingCountries = ['Germany', 'England', 'United States', 'Canada', 'Australia', 'New Zealand', 'Ireland', 'South Africa'];
             
             if (country && !englishSpeakingCountries.includes(country)) {
+                const languageCode = getLanguageCode(country);
                 const userConfirmed = confirm(`Möchten Sie die Seite mit Google Übersetzer in Ihre Sprache (${country}) übersetzen?`);
                 if (userConfirmed) {
-                    translatePage(country);
+                    translatePage(languageCode);
                 }
             }
         }
