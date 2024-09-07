@@ -43,7 +43,7 @@
             
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
-            
+            <br>
             <label for="captcha">What is <?php echo $question; ?>?</label>
             <input type="text" id="captcha" name="captcha" required>
             <input type="hidden" name="question" value="<?php echo $question; ?>">

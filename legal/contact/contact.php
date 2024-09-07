@@ -29,14 +29,20 @@
                     eval('$correct_answer = ' . $question . ';');
 
                     if ($captcha == $correct_answer) {
-                        $to = "info@mail.hannes-hirsch.de";
+                        $to = "info@hannes-hirsch.de";
                         $headers = "From: " . $email;
+                        $full_message = "Name: $name\nEmail: $email\n\n$message";
                         
-                        // mail($to, $subject, $message, $headers);
-                        echo "This tool is out of order.";
+                        if (mail($to, $subject, $full_message, $headers)) {
+                            echo "E-Mail erfolgreich gesendet.";
+                        } else {
+                            echo "Fehler beim Senden der E-Mail.";
+                        }
                     } else {
-                        echo "Captcha wrong";
+                        echo "Captcha falsch.";
                     }
+                } else {
+                    echo "REQUEST_METHOD != POST"
                 }
                 ?>
             </span>
