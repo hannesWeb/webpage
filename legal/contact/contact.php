@@ -42,7 +42,7 @@
                         echo "Captcha falsch.";
                     }
                 } else {
-                    echo "REQUEST_METHOD != POST"
+                    echo "REQUEST_METHOD != POST";
                 }
                 ?>
             </span>
