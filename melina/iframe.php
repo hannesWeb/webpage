@@ -8,7 +8,7 @@
 <body>
     <div id="content">
         <?php
-        $url = 'https://www.a.de/';
+        $url = 'https://hannes-hirsch.de/melina/iframe.html';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
