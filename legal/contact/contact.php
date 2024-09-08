@@ -33,11 +33,11 @@
                         $headers = "From: " . $email;
                         $full_message = "Name: $name\nEmail: $email\n\n$message";
                         
-                        if (mail($to, $subject, $full_message, $headers)) {
-                            echo "E-Mail erfolgreich gesendet.";
-                        } else {
-                            echo "Fehler beim Senden der E-Mail.";
-                        }
+                        //if (mail($to, $subject, $full_message, $headers)) {
+                        //    echo "E-Mail erfolgreich gesendet.";
+                        //} else {
+                            echo "Fehler beim Senden der E-Mail. Service currently unavailable!";
+                        //}
                     } else {
                         echo "Captcha falsch.";
                     }
