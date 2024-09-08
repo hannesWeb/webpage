@@ -8,7 +8,7 @@
 <body>
     <div id="content">
         <?php
-        $url = 'https://hannes-hirsch.de/melina/iframe.html';
+        $url = 'https://www.schoener-onanieren.de/';
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
