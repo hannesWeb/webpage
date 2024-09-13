@@ -2,42 +2,50 @@
 
 ob_start();
 
-$city = @file_get_contents("https://hannes-hirsch.de/api/get/city.php");
-$content = @file_get_contents("https://hannes-hirsch.de/api/get/content.php");
-$continent = @file_get_contents("https://hannes-hirsch.de/api/get/continent.php");
-$country = @file_get_contents("https://hannes-hirsch.de/api/get/country.php");
-$curcode = @file_get_contents("https://hannes-hirsch.de/api/get/curcode.php");
-$cursym = @file_get_contents("https://hannes-hirsch.de/api/get/cursym.php");
-$date = @file_get_contents("https://hannes-hirsch.de/api/get/date.php");
-$http = @file_get_contents("https://hannes-hirsch.de/api/get/http.php");
-$ip = @file_get_contents("https://hannes-hirsch.de/api/get/ip.php");
-$isp = @file_get_contents("https://hannes-hirsch.de/api/get/isp.php");
-$latitude = @file_get_contents("https://hannes-hirsch.de/api/get/latitude.php");
-$longitude = @file_get_contents("https://hannes-hirsch.de/api/get/longitude.php");
-$os = @file_get_contents("https://hannes-hirsch.de/api/get/os.php");
-$time = @file_get_contents("https://hannes-hirsch.de/api/get/time.php");
-$timezone = @file_get_contents("https://hannes-hirsch.de/api/get/timezone.php");
-$data_size = @file_get_contents("https://hannes-hirsch.de/api/post/data_size.php");
-$browser = @file_get_contents("https://hannes-hirsch.de/api/get/browser.php");
-$lang = @file_get_contents("https://hannes-hirsch.de/api/get/lang.php");
+function getVisIpAddr() { 
+    if (!empty($_SERVER['HTTP_CLIENT_IP'])) { 
+        return $_SERVER['HTTP_CLIENT_IP']; 
+    } 
+    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) { 
+        return $_SERVER['HTTP_X_FORWARDED_FOR']; 
+    } 
+    else { 
+        return $_SERVER['REMOTE_ADDR']; 
+    } 
+} 
+
+$ip = getVisIPAddr();
+$ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ip));
+$ispData = @json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$isp = $ispData->org ?? 'Unbekannt';
+$date = date('Y-m-d H:i:s');
+$browser = $_SERVER['HTTP_USER_AGENT'];
+$lang = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+$timezone = $ipdat->geoplugin_timezone;
+$http_status = http_response_code();
+$referrer = $_SERVER['HTTP_REFERER'] ?? 'Direkter Zugriff';
+$os = php_uname('s') . ' ' . php_uname('r');
+$content = $_SERVER['REQUEST_URI'];
+$data_size = $_SERVER['CONTENT_LENGTH'] ?? 'Nur bei POST-Requests zu ermitteln';
 
 echo "<h2>Benutzerinformationen</h2>";
 echo "<ul>";
 echo "<li><strong>IP-Adresse:</strong> {$ip}</li>";
 echo "<li><strong>Internet-Service-Provider:</strong> {$isp}</li>";
-echo "<li><strong>Land:</strong> {$country}</li>";
-echo "<li><strong>Stadt:</strong> {$city}</li>";
-echo "<li><strong>Kontinent:</strong> {$continent}</li>";
-echo "<li><strong>Breitengrad:</strong> {$latitude}</li>";
-echo "<li><strong>Längengrad:</strong> {$longitude}</li>";
-echo "<li><strong>Währungssymbol:</strong> {$cursym}</li>";
-echo "<li><strong>Währungscode:</strong> {$curcode}</li>";
+echo "<li><strong>Land:</strong> {$ipdat->geoplugin_countryName}</li>";
+echo "<li><strong>Stadt:</strong> {$ipdat->geoplugin_city}</li>";
+echo "<li><strong>Kontinent:</strong> {$ipdat->geoplugin_continentName}</li>";
+echo "<li><strong>Breitengrad:</strong> {$ipdat->geoplugin_latitude}</li>";
+echo "<li><strong>Längengrad:</strong> {$ipdat->geoplugin_longitude}</li>";
+echo "<li><strong>Währungssymbol:</strong> {$ipdat->geoplugin_currencySymbol}</li>";
+echo "<li><strong>Währungscode:</strong> {$ipdat->geoplugin_currencyCode}</li>";
 echo "<li><strong>Zeitzone:</strong> {$timezone}</li>";
 echo "<li><strong>Datum und Uhrzeit des Abrufs:</strong> {$date}</li>";
 echo "<li><strong>Browser:</strong> {$browser}</li>";
 echo "<li><strong>Sprache und Browser-Version:</strong> {$lang}</li>";
 echo "<li><strong>Inhalt des Abrufs:</strong> {$content}</li>";
-echo "<li><strong>HTTP-Statuscode:</strong> {$http}</li>";
+echo "<li><strong>HTTP-Statuscode:</strong> {$http_status}</li>";
+echo "<li><strong>Verweisende Website:</strong> {$referrer}</li>";
 echo "<li><strong>Betriebssystem:</strong> {$os}</li>";
 echo "<li><strong>Größe der empfangenen Daten:</strong> {$data_size}</li>";
 echo "</ul>";
