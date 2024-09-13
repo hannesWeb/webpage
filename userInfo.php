@@ -17,7 +17,7 @@ $longitude = @file_get_contents("https://hannes-hirsch.de/api/get/longitude.php"
 $os = @file_get_contents("https://hannes-hirsch.de/api/get/os.php");
 $time = @file_get_contents("https://hannes-hirsch.de/api/get/time.php");
 $timezone = @file_get_contents("https://hannes-hirsch.de/api/get/timezone.php");
-$data_size = @file_get_contents("https://hannes-hirsch.de/api/post/data_size.php");
+$data_size = @file_get_contents("https://hannes-hirsch.de/api/post/dataSize.php");
 $browser = @file_get_contents("https://hannes-hirsch.de/api/get/browser.php");
 $lang = @file_get_contents("https://hannes-hirsch.de/api/get/lang.php");
 
