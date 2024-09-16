@@ -23,3 +23,7 @@ RewriteRule "^whatsapp/banAppeal/appealFiles/.*" - [F,L]
 # Redirect all http links to https with a 301 status code
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect /bewerbung/* to a 451 error
+RewriteCond %{REQUEST_URI} ^/bewerbung/
+RewriteRule ^(.*)$ - [R=451,L]
