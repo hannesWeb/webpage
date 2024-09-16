@@ -25,5 +25,5 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect /bewerbung/* to a 451 error
-RewriteCond %{REQUEST_URI} ^/bewerbung/
+RewriteCond %{REQUEST_URI} ^/bewerbung
 RewriteRule ^(.*)$ - [R=451,L]
