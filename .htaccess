@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
-# Alle URLs außer der Startseite auf die Fehlerseite weiterleiten
-RewriteCond %{REQUEST_URI} !^/?$
+# Ausnahme für die Startseite, style.css und alles im Verzeichnis /error
+RewriteCond %{REQUEST_URI} !^/?$ [NC]
+RewriteCond %{REQUEST_URI} !^/style\.css$ [NC]
+RewriteCond %{REQUEST_URI} !^/error/ [NC]
+
+# Alle anderen URLs auf die Fehlerseite weiterleiten
 RewriteRule ^ /error/403.html [R=403,L]
