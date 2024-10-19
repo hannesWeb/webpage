@@ -4,5 +4,6 @@ RewriteBase /
 # Exclude the homepage, style.css, and anything in /error/ from the redirection
 RewriteCond %{REQUEST_URI} !^/$
 RewriteCond %{REQUEST_URI} !^/style\.css$
-RewriteCond %{REQUEST_URI} !^/error/
+RewriteCond %{REQUEST_URI} !^/error
+RewriteCond %{REQUEST_URI} !^/api
 RewriteRule ^ / [R=302,L]
