@@ -1,6 +1,0 @@
-RewriteEngine On
-RewriteBase /
-
-# Alle URLs außer der Startseite auf die Startseite umleiten
-RewriteCond %{REQUEST_URI} !^/$
-RewriteRule ^ / [R=302,L]
