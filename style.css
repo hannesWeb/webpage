@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
-    font-family: 'Inter', sans-serif; /* Eine moderne, gut lesbare Schriftart */
-    background-color: #f4f6f8; /* Heller, neutraler Hintergrund für alle Seiten */
-    color: #333; /* Dunkle Textfarbe für guten Kontrast */
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -19,11 +19,6 @@ body {
 }
 
 /* Kopfbereich */
-.page_header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .page_header span {
     font-size: 2.5em;
     color: #3A72E8;
@@ -31,84 +26,32 @@ body {
 }
 
 /* Abschnittsüberschriften */
-h1, h2, h3 {
+.section_header {
+    font-size: 1.8em;
     color: #5C6BC0;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3A72E8;
+    padding-bottom: 5px;
 }
 
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 2em;
-}
-
-h3 {
-    font-size: 1.5em;
-}
-
-/* Textabsätze */
-p {
+/* Text für Abschnitte */
+.content_section_text p {
     font-size: 1.2em;
-    color: #555;
     margin-bottom: 1.5em;
 }
 
-/* Links */
-a {
+.content_section_text a {
     color: #3A72E8;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-a:hover {
+.content_section_text a:hover {
     color: #2C5BBF;
     text-decoration: underline;
-}
-
-/* Formularelemente */
-input, button {
-    padding: 10px;
-    width: 100%;
-    margin: 15px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 18px;
-}
-
-button {
-    background-color: #5C6BC0;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #3F51B5;
-}
-
-/* Floating Button */
-#floating-button {
-    display: block;
-    width: 120px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: #3A72E8;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-#floating-button:hover {
-    background-color: #2C5BBF;
 }
 
 /* Footer */
@@ -119,7 +62,6 @@ button:hover {
     padding: 20px;
     margin-top: 40px;
     border-radius: 10px;
-    position: relative;
 }
 
 .footer a {
@@ -129,4 +71,26 @@ button:hover {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* Floating Button */
+#floating-button {
+    display: block;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #3A72E8;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#floating-button:hover {
+    background-color: #2C5BBF;
 }
