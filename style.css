@@ -1,56 +1,66 @@
-/* Allgemeines Styling */
+/* Global Styles */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Inter', sans-serif; /* Eine moderne, gut lesbare Schriftart */
+    background-color: #f4f6f8; /* Heller, neutraler Hintergrund für alle Seiten */
+    color: #333; /* Dunkle Textfarbe für guten Kontrast */
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
+/* Hauptcontainer */
 .main_page {
-    width: 70%;
-    margin: 50px auto;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Kopfbereich */
 .page_header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .page_header span {
-    display: block;
     font-size: 2.5em;
-    font-weight: 600;
     color: #3A72E8;
-    margin-top: 10px;
+    font-weight: bold;
 }
 
-.section_header {
-    font-size: 1.8em;
-    font-weight: 500;
-    color: #3A72E8;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 4px solid #3A72E8;
-}
-
-.content_section_text p {
-    font-size: 1.1em;
-    color: #555;
+/* Abschnittsüberschriften */
+h1, h2, h3 {
+    color: #5C6BC0;
     margin-bottom: 15px;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Textabsätze */
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+/* Links */
 a {
     color: #3A72E8;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s;
+    transition: color 0.3s ease;
 }
 
 a:hover {
@@ -58,73 +68,25 @@ a:hover {
     text-decoration: underline;
 }
 
-h1, h2 {
-    color: #3A72E8;
-    font-weight: 600;
-}
-
-h1 {
-    font-size: 2.2em;
-    margin-bottom: 0.8em;
-}
-
-h2 {
-    font-size: 1.6em;
-    margin-bottom: 0.5em;
-}
-
-p {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-/* Eingabefelder und Schaltflächen */
+/* Formularelemente */
 input, button {
-    padding: 14px;
+    padding: 10px;
     width: 100%;
     margin: 15px 0;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid #ddd;
-    font-size: 16px;
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
+    font-size: 18px;
 }
 
 button {
-    background-color: #3A72E8;
+    background-color: #5C6BC0;
     color: white;
-    font-weight: 500;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #2C5BBF;
-}
-
-/* Footer Styling */
-.footer {
-    background-color: #3A72E8;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 40px;
-}
-
-.footer p {
-    margin: 5px 0;
-}
-
-.footer a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.footer a:hover {
-    color: #CCCCFF;
+    background-color: #3F51B5;
 }
 
 /* Floating Button */
@@ -139,7 +101,7 @@ button:hover {
     line-height: 50px;
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     font-size: 16px;
     text-decoration: none;
     transition: background-color 0.3s;
@@ -147,4 +109,24 @@ button:hover {
 
 #floating-button:hover {
     background-color: #2C5BBF;
+}
+
+/* Footer */
+.footer {
+    background-color: #5C6BC0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
