@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+# Erlaube alles, wenn die Server-IP 192.168.2.200 ist
+RewriteCond %{REMOTE_ADDR} ^192\.168\.2\.200$
+RewriteRule ^ - [L]
+
+# Exclude the homepage, style.css, and anything in /error/ and /api/ from the redirection
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/style\.css$
+RewriteCond %{REQUEST_URI} !^/error
+RewriteCond %{REQUEST_URI} !^/api
+RewriteRule ^ / [R=302,L]

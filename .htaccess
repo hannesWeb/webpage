@@ -1,13 +1,29 @@
+# Redirects
+Redirect gone /updates/dos
+Redirect gone /updates/dos-attack
+Redirect gone /updates/dos-info
+Redirect gone /updates/gallery
+Redirect gone /updates/gallery-info
+Redirect gone /updates/dos/timeline
+
+# Enable RewriteEngine
 RewriteEngine On
-RewriteBase /
 
-# Erlaube alles, wenn die Server-IP 192.168.2.200 ist
-RewriteCond %{REMOTE_ADDR} ^192\.168\.2\.200$
-RewriteRule ^ - [L]
+# Block access to certain directories and files
+RewriteRule "^\.git/" - [F,L]
+RewriteRule "^\.github/" - [F,L]
+RewriteRule "^\README.md" - [F,L]
+RewriteRule "^\CODE_OF_CONDUCT.md" - [F,L]
+RewriteRule "^\backupIndex.html" - [F,L]
+RewriteRule "^\error.html" - [F,L]
+RewriteRule "^\wartung.html" - [F,L]
+RewriteRule "^\vorlage.html" - [F,L]
+RewriteRule "^whatsapp/banAppeal/appealFiles/.*" - [F,L]
 
-# Exclude the homepage, style.css, and anything in /error/ and /api/ from the redirection
-RewriteCond %{REQUEST_URI} !^/$
-RewriteCond %{REQUEST_URI} !^/style\.css$
-RewriteCond %{REQUEST_URI} !^/error
-RewriteCond %{REQUEST_URI} !^/api
-RewriteRule ^ / [R=302,L]
+# Redirect all http links to https with a 301 status code
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect /bewerbung/* to a 451 error
+RewriteCond %{REQUEST_URI} ^/bewerbung
+RewriteRule ^(.*)$ - [R=451,L]
