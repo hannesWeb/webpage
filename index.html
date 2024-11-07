@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta property="og:title" content="Hannes' Website" />
-<meta property="og:description" content="Hier könnte Ihre Werbung stehen!" />
-<meta property="og:image" content="https://www.hannes-hirsch.de/favicon/android-chrome-512x512.png" />
-<meta property="og:url" content="https://hannes-hirsch.de" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
-<link rel="stylesheet" href="/style.css">
-<html>
+<html lang="de">
 <head>
-    <title>Offline</title>
+    <meta charset="UTF-8">
+    <title>Serverfehler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Serverfehler - Die Website ist momentan nicht erreichbar">
+    <link rel="stylesheet" href="/style.css">
     <style>
+        /* Anpassung für die Serverfehler-Seite */
         body {
-            text-align: center;
-            padding: 150px;
+            background-color: #fce4e4;
+            color: #a94442;
+            font-family: 'Roboto', sans-serif;
+        }
+        .error_container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff5f5;
+            border: 2px solid #f2dede;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
         }
         h1 {
-            font-size: 50px;
+            color: #a94442;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
         }
-        body {
-            font: 20px Helvetica, sans-serif;
-            color: #333;
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #a94442;
+            text-align: center;
         }
-        article {
-            display: block;
-            text-align: left;
-            width: 650px;
-            margin: 0 auto;
+        .error_code {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .support_info {
+            font-size: 1em;
+            color: #a94442;
+            margin-top: 40px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <article>
-        <h1>Wir werden bald zurück sein!</h1>
-        <div>
-            <p>Die Website ist <strong>vorübergehend nicht verfügbar</strong>. Wir führen derzeit umfassende Wartungsarbeiten durch, um Ihnen zukünftig ein noch besseres Nutzererlebnis zu bieten. Während dieser Zeit arbeiten wir daran, sowohl das Design der Benutzeroberfläche (UI) als auch die Benutzerfreundlichkeit (UX) zu verbessern. Dies wird einige Zeit in Anspruch nehmen, da wir alles gründlich überarbeiten und optimieren.</p>
-            <p>Wir planen, die Arbeiten bis zum <strong>27.10.2024</strong> abzuschließen. Bis dahin bitten wir um Geduld und bedanken uns für Ihr Verständnis.</p>
-            <p>Freuen Sie sich auf die kommende Version, die Ihnen eine intuitive und benutzerfreundliche Oberfläche bieten wird, damit Sie noch effizienter navigieren können.</p>
-            <p> - Hannes Hirsch und das gesamte Team</p>
-        </div>
-    </article>
+    <div class="error_container">
+        <h1>Unerwarteter Serverfehler</h1>
+        <p>Leider ist ein Problem aufgetreten, und unsere Website ist momentan nicht erreichbar. Der Server reagiert aktuell nicht und kann Ihre Anfrage nicht verarbeiten.</p>
+        <p>Wir sind bereits dabei, das Problem zu untersuchen, und arbeiten daran, den Fehler schnellstmöglich zu beheben.</p>
+        <div class="error_code">Fehlercode: SERVER_ERR_503</div>
+        <p>Bitte versuchen Sie es später erneut. Falls der Fehler weiterhin besteht, können Sie uns auch per E-Mail kontaktieren.</p>
+        <div class="support_info">Vielen Dank für Ihr Verständnis!<br> - Hannes Hirsch und das Team</div>
+    </div>
 </body>
 </html>
