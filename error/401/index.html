@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>401 Unauthorized - hannes-hirsch.de</title>
-    <meta property="og:title" content="Hannes' Website" />
-    <meta property="og:description" content="Hier könnte Ihre Werbung stehen!" />
-    <meta property="og:image" content="https://www.hannes-hirsch.de/favicon/android-chrome-512x512.png" />
-    <meta property="og:url" content="https://hannes-hirsch.de" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>Fehler 401 - Nicht autorisiert</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        body { background-color: #fff3cd; color: #856404; }
+        .error_container { background-color: #fffbe6; border: 2px solid #ffeeba; }
+        .error_code { color: #856404; }
+        a { color: #856404; }
+    </style>
 </head>
 <body>
-    <div class="main_page">
-        <div class="page_header">
-            <span>401 Unauthorized</span>
-        </div>
-        <div class="content_section_text">
-            <p>Es tut uns leid, aber die Anfrage, die Sie an unseren Server gesendet haben, konnte nicht bearbeitet werden, da Ihr Client keine gültigen Authentifizierungsdaten für das Ziel bereitgestellt hat. Dies bedeutet, dass Ihr Client sich authentifizieren muss, um die angeforderte Antwort zu erhalten.</p>
-        </div>
+    <div class="error_container">
+        <h1>Zugriff verweigert</h1>
+        <p>Sie sind nicht berechtigt, auf diese Seite zuzugreifen.</p>
+        <div class="error_code">Fehlercode: ERROR_401 - Nicht autorisiert</div>
+        <p><a href="/">Zurück zur Startseite</a></p>
     </div>
 </body>
 </html>

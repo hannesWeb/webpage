@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>403 Forbidden - hannes-hirsch.de</title>
-    <meta property="og:title" content="Hannes' Website" />
-    <meta property="og:description" content="Hier könnte Ihre Werbung stehen!" />
-    <meta property="og:image" content="https://www.hannes-hirsch.de/favicon/android-chrome-512x512.png" />
-    <meta property="og:url" content="https://hannes-hirsch.de" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <title>Fehler 403 - Verboten</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        body { background-color: #f8d7da; color: #721c24; }
+        .error_container { background-color: #fef2f2; border: 2px solid #f5c6cb; }
+        .error_code { color: #721c24; }
+        a { color: #721c24; }
+    </style>
 </head>
 <body>
-    <div class="main_page">
-        <div class="page_header">
-            <span>403 Forbidden</span>
-        </div>
-        <div class="content_section_text">
-            <p>Der Zugriff auf die angeforderte Ressource wurde verweigert. Dies bedeutet, dass der Server Ihre Anfrage verstanden hat, aber sich weigert, sie zu autorisieren. Ein 403 Forbidden deutet darauf hin, dass die Anfrage vollständig abgelehnt wurde und auch nicht durch eine erneute Authentifizierung erfüllt werden kann.</p>
-        </div>
+    <div class="error_container">
+        <h1>Zugriff untersagt</h1>
+        <p>Sie haben keine Berechtigung, auf diesen Bereich zuzugreifen.</p>
+        <div class="error_code">Fehlercode: ERROR_403 - Verboten</div>
+        <p><a href="/">Zurück zur Startseite</a></p>
     </div>
 </body>
 </html>
