@@ -117,17 +117,11 @@
     document.addEventListener('DOMContentLoaded', function() {
         var popup = document.createElement('div');
         popup.className = 'popup';
-        popup.innerHTML = '<h2>Important Notice</h2><p>This data will be removed from this page as of October 1st, 2024, and will be moved to https://uptime.hannes-hirsch.de/.</p><button class="close-button" onclick="closePopup()">Close</button><a href="https://uptime.hannes-hirsch.de" class="new-page-button">Go to New Page</a>';
+        popup.innerHTML = '<h2>Important Notice</h2><p>This data has been removed from this page since October 1st, 2024, and was moved to https://uptime.hannes-hirsch.de/.</p><a href="https://uptime.hannes-hirsch.de" class="new-page-button">Go to New Page</a>';
         document.body.appendChild(popup);
         popup.style.display = 'block';
         document.querySelector('.main_page').classList.add('blurred');
     });
-
-    function closePopup() {
-        var popup = document.querySelector('.popup');
-        popup.style.display = 'none';
-        document.querySelector('.main_page').classList.remove('blurred');
-    }
 </script>
 </head>
 <body>
@@ -136,11 +130,11 @@
             <span>Maintenance</span>
         </div>
         <div class="content_section_text">
-            <p>We'll be under maintenance on October 2nd, 2024</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia libero ut sapien dignissim, at vulputate lorem interdum.</p>
             <p class="section_header">Type of Maintenance</p>
-            <p>We are performing a scheduled server upgrade to ensure better performance and security. This involves updating our server software and optimizing our database. We apologize for any inconvenience caused and appreciate your understanding.</p>
+            <p>Phasellus non ex non justo suscipit tincidunt. Quisque varius eros nec ipsum tristique, sed condimentum magna convallis. Fusce eget nibh id justo eleifend viverra non id sapien. Curabitur sit amet est in arcu dictum posuere.</p>
             <p class="section_header">Estimated Time</p>
-            <p>We expect the maintenance to be completed by 2:00 PM UTC+1. Please check back after this time.</p>
+            <p>Aliquam erat volutpat. Ut et nunc vitae velit tristique ultrices. Morbi aliquet augue id arcu pharetra suscipit. Nullam semper quam vel augue auctor vehicula.</p>
         </div>
     </div>
     <a href="https://www.hannes-hirsch.de" id="floating-button" style="display: block; width: 120px; height: 30px; border-radius: 50%; background-color: rgb(92, 107, 192); color: white; text-align: center; padding: 16px 0px; position: fixed; bottom: 20px; right: 20px; font-size: 18px; text-decoration: none; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#3F51B5';" onmouseout="this.style.backgroundColor='#5C6BC0';">
