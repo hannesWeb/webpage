@@ -97,9 +97,6 @@
         position: absolute;
         bottom: 20px;
     }
-    .popup .close-button {
-        left: 20px;
-    }
     .popup .new-page-button {
         right: 20px;
         text-align: center;
@@ -110,14 +107,14 @@
     }
     /* Blur effect */
     .blurred {
-        filter: blur(5px);
+        filter: blur(10px);
     }
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var popup = document.createElement('div');
         popup.className = 'popup';
-        popup.innerHTML = '<h2>Important Notice</h2><p>This data has been removed from this page since October 1st, 2024, and was moved to https://uptime.hannes-hirsch.de/.</p><a href="https://uptime.hannes-hirsch.de" class="new-page-button">Go to New Page</a>';
+        popup.innerHTML = '<h2>Important Notice</h2><p>This data has been removed from this page on October 1st, 2024, and was moved to https://uptime.hannes-hirsch.de/.</p><a href="https://uptime.hannes-hirsch.de" class="new-page-button">Go to New Page</a>';
         document.body.appendChild(popup);
         popup.style.display = 'block';
         document.querySelector('.main_page').classList.add('blurred');
