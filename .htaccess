@@ -27,3 +27,5 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Redirect /bewerbung/* to a 451 error
 RewriteCond %{REQUEST_URI} ^/bewerbung
 RewriteRule ^(.*)$ - [R=451,L]
+RewriteCond %{REQUEST_URI} ^/games/doodleship
+RewriteRule ^(.*)$ - [R=503,L]
