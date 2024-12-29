@@ -20,7 +20,7 @@
             // Dateien und Verzeichnisse auflisten
             foreach ($files as $file) {
                 // Ignoriere die speziellen Verzeichnisse '.' und '..' sowie 'index.html'
-                if ($file === '.' || $file === '..' || $file === 'index.html') {
+                if ($file === '.' || $file === '..' || $file === 'index.html' || $file === 'get.php') {
                     continue;
                 }
 
