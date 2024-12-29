@@ -20,16 +20,16 @@
 
                 // Dateien und Verzeichnisse auflisten
                 foreach ($files as $file) {
-                    // Ignoriere die speziellen Verzeichnisse '.' und '..'
-                    if ($file === '.' || $file === '..') {
+                    // Ignoriere die speziellen Verzeichnisse '.' und '..' sowie 'index.html'
+                    if ($file === '.' || $file === '..' || $file === 'index.html') {
                         continue;
                     }
 
                     // Prüfen, ob es ein Verzeichnis oder eine Datei ist
                     if (is_dir($file)) {
-                        echo "<li><a href=\"$file\">[Verzeichnis] $file</a></li>";
+                        echo "<li><button onclick=\"location.href='$file'\">[Verzeichnis] $file</button></li>";
                     } else {
-                        echo "<li><a href=\"$file\">$file</a></li>";
+                        echo "<li><button onclick=\"location.href='$file'\">$file</button></li>";
                     }
                 }
                 ?>
